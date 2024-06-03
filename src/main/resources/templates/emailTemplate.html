@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Confirmation</title>
+</head>
+<body>
+<h3>Concert Ticket Confirmation 🎵✨</h3>
+<p>Dear [[${name}]],</p>
+<p>Thank you for purchasing tickets to <strong>[[${concertName}]]</strong>! We're thrilled to have you join us for what promises to be an unforgettable night of music and entertainment.</p>
+
+<p>Below, you'll find the details of your ticket purchase:</p>
+<ul>
+    <li><strong>Event:</strong> [[${concertName}]]</li>
+    <li><strong>Date:</strong> [[${date}]]</li>
+    <li><strong>Time:</strong> [[${time}]]</li>
+    <li><strong>Venue:</strong> [[${venueName}]]</li>
+    <li><strong>Seat/Section:</strong> [[${seatSection}]]</li>
+    <li><strong>Barcode:</strong> <img th:src="${barcodeUrl}" alt="Barcode"/></li>
+</ul>
+
+<p>Please make sure to bring a valid ID along with this confirmation email to the venue. Your barcode will be scanned for entry, so it's important to have it accessible on your phone or printed out.</p>
+
+<p>If you have any questions or concerns regarding your ticket purchase or the event itself, feel free to reach out to our customer support team at [[${contactInformation}]].</p>
+
+<p>Thank you once again for choosing to spend your evening with us. We can't wait to see you at the concert!</p>
+
+<p>Best regards,<br/>
+    [[${yourName}]]<br/>
+    [[${yourPosition}]]<br/>
+    [[${concertOrganizer}]]</p>
+</body>
+</html>
